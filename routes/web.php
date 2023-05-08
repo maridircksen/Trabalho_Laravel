@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\FilmesController;
+use \App\Http\Controllers\ContatoController;
+use \App\Http\Controllers\ContatosEnviadosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home']);
+
+Route::get('/home', [HomeController::class, 'home']);
+
+Route::get('/filmes', [FilmesController::class, 'filmes']);
+
+Route::get('/contato', [ContatoController::class, 'contato']);     
+
+Route::post('/contatos_enviados', [ContatosEnviadosController::class, 'contatos_enviados']);
