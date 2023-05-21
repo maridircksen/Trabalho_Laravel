@@ -1,6 +1,6 @@
 @extends('menu')
 
-@section('title', 'Contato - Resultado')
+@section('title', 'Contato - Enviados')
 
 @section('content')
     <h1>Dados do Contato</h1>

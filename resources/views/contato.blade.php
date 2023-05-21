@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Entre em contato conosco</h1>
-    <form action="/contato_resultado" method="post">
+    <form action="/contatos_enviados" method="post">
         @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
@@ -18,6 +18,6 @@
             <label for="mensagem">Mensagem</label>
             <textarea name="mensagem" id="mensagem" cols="30" rows="10" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
+        <button type="submit" class="btn btn-outline-success" style="margin-top: 5px">Enviar</button>
     </form>
 @endsection
